@@ -17,21 +17,29 @@ $rows = $data->fetchAll(PDO::FETCH_OBJ);
             </tr>
         </thead>
         <tbody>
-            <?php foreach($rows as $row) : ?>
+            <?php foreach ($rows as $row) : ?>
 
-            <tr>
-                <td class="border-2 border-gray-700 px-4 py-2"><?php echo $row->id; ?></td>
+                <tr>
+                    <td class="border-2 border-gray-700 px-4 py-2"><?php echo $row->id; ?></td>
 
-                <td class="border-2 border-gray-700 px-4 py-2"><?php echo $row->name; ?></td>
+                    <td class="border-2 border-gray-700 px-4 py-2"><?php echo $row->name; ?></td>
 
-                <td class="border-2 border-gray-700 px-4 py-2">
-                    <a href="delete.php?del_id=<?php echo $row->id; ?>" class="cursor-pointer bg-red-300 px-7 py-2 border border-red-950 text-base rounded-lg font-semibold">DELETE</a>
-                </td>
+                    <td class="border-2 border-gray-700 px-4 py-2">
+                        <a
+                            href="delete.php?del_id=<?php echo $row->id; ?>"
+                            class="cursor-pointer bg-red-300 px-7 py-2 border border-red-950 text-base rounded-lg font-semibold">
+                            DELETE
+                        </a>
+                    </td>
 
-                <td class="border-2 border-gray-700 px-4 py-2">
-                    <button class="bg-blue-300 px-7 py-2 border border-blue-950 text-base rounded-lg font-semibold">UPDATE</button>
-                </td>
-            </tr>
+                    <td class="border-2 border-gray-700 px-4 py-2">
+                        <a
+                            href="update.php?upd_id=<?php echo $row->id; ?>"
+                            class=" cursor-pointer bg-blue-300 px-7 py-2 border border-blue-950 text-base rounded-lg font-semibold">
+                            UPDATE
+                        </a>
+                    </td>
+                </tr>
 
             <?php endforeach; ?>
         </tbody>
