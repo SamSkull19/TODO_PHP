@@ -1,5 +1,5 @@
 <?php
-
+require "conn.php";
 $data = $conn->query("SELECT * FROM tasks");
 $data->execute();
 $rows = $data->fetchAll(PDO::FETCH_OBJ);
