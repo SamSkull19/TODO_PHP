@@ -25,7 +25,7 @@ $rows = $data->fetchAll(PDO::FETCH_OBJ);
                 <td class="border-2 border-gray-700 px-4 py-2"><?php echo $row->name; ?></td>
 
                 <td class="border-2 border-gray-700 px-4 py-2">
-                    <button class="bg-red-300 px-7 py-2 border border-red-950 text-base rounded-lg font-semibold">DELETE</button>
+                    <a href="delete.php?del_id=<?php echo $row->id; ?>" class="cursor-pointer bg-red-300 px-7 py-2 border border-red-950 text-base rounded-lg font-semibold">DELETE</a>
                 </td>
 
                 <td class="border-2 border-gray-700 px-4 py-2">
